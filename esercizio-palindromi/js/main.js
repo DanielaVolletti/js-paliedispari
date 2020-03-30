@@ -29,9 +29,12 @@ console.log("La parola inserita letta al contrario è " + reverseString(parolaUs
 
 // verifico che la parola revertata sia uguale alla parola inserita dall'utente e quindi palindroma, quindi dò output
 if (reverseString(parolaUser) === parolaUser){
-  var msg ="la parola è palindroma";
+  var output ="la parola è palindroma";
 } else {
-  msg = "la parola non è palindroma";
+  output = "la parola non è palindroma";
 }
 
-console.log("La parola inserita dall'utente è " + parolaUser + " , la medesima parola letta al contrario è " + reverseString(parolaUser) + " quindi: " + msg);
+console.log("La parola inserita dall'utente è " + parolaUser + " , la medesima parola letta al contrario è " + reverseString(parolaUser) + " quindi: " + output);
+
+// output sulla pagina
+document.getElementById('parola-palindroma').innerHTML = "La parola inserita dall'utente è " + parolaUser + " , la medesima parola letta al contrario è " + reverseString(parolaUser) + " quindi: " + output;
