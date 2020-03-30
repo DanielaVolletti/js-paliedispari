@@ -38,6 +38,7 @@ function pariDispari(num) {
 // applico funzione per verificare se la somma è pari o dispari
 var risultato = pariDispari (somma);
 
+// stampo in console se somma è pari o dispari
 console.log(risultato);
 
 // verifico il risultato della somma
