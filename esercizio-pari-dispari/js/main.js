@@ -25,12 +25,20 @@ var somma = numUser + numComputer;
 
 console.log("La somma dei numeri è " + somma);
 
-// verifico con condizionale se il risultato della somma è pari o dispari
-if (somma % 2 === 0) {
-  var risultato = "pari";
-} else {
-  risultato = "dispari";
+// creo funzione per verificare se numero è pari o dispari
+function pariDispari(num) {
+  if (num % 2 === 0) {
+    var risultatoModulo = "pari";
+  } else {
+    risultatoModulo = "dispari";
+  }
+  return risultatoModulo;
 }
+
+// applico funzione per verificare se la somma è pari o dispari
+var risultato = pariDispari (somma);
+
+console.log(risultato);
 
 // verifico il risultato della somma
 console.log("Il risultato della somma è " + risultato);
