@@ -32,11 +32,17 @@ if (somma % 2 === 0) {
   risultato = "dispari";
 }
 
+// verifico il risultato della somma
+console.log("Il risultato della somma è " + risultato);
+
 // verifico sulla base della scelta dell'utente se ha vinto lui o il pc
 if (risultato === sceltaUser) {
-  var outputVittoria = "Ha vinto l'user";
+  var outputVittoria = "Ha vinto l'user.";
 } else {
-  outputVittoria = "Ha vinto il computer";
+  outputVittoria = "Ha vinto il computer.";
 }
 
-console.log(outputVittoria);
+console.log("L'user ha scelto tra pari e dispari: " + sceltaUser + ". Il numero scelto dall'utente è " + numUser + " e il numero scelto dal computer è " + numComputer + ". La somma dei due numeri è " + somma + ". Quindi: " + outputVittoria);
+
+// stampa del risultato in pagina
+document.getElementById('pari-dispari').innerHTML = "L'user ha scelto tra pari e dispari: " + sceltaUser + ". Il numero scelto dall'utente è " + numUser + " e il numero scelto dal computer è " + numComputer + ". La somma dei due numeri è " + somma + ". Quindi: " + outputVittoria;
