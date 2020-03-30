@@ -5,7 +5,6 @@ dò output a utente dicendogli che ho verificato;
 qui sicuramente da cercare ci sarà il come revertare una parola.
 */
 
-
 // chiedo all'utente di inserire una parola
 var parolaUser = prompt("Inserisci una parola");
 
