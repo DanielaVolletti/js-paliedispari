@@ -24,17 +24,30 @@ function reverseString(parola) {
     return unisciCaratteri;
 }
 
-// verifico parola inserita dall'utente letta al contrario
-console.log("La parola inserita letta al contrario è " + reverseString(parolaUser));
+// creo variabile parola dell'utente revertata
+var parolaRevertata = reverseString(parolaUser);
 
-// verifico che la parola revertata sia uguale alla parola inserita dall'utente e quindi palindroma, quindi dò output
-if (reverseString(parolaUser) === parolaUser){
-  var output ="la parola è palindroma";
-} else {
-  output = "la parola non è palindroma";
+// verifico parola inserita dall'utente letta al contrario
+console.log("La parola inserita letta al contrario è " + parolaRevertata);
+
+// creo una funzione per verificare che la parola revertata sia uguale a quella inserita, quindi do output
+function palindromo(parola1,parola2) {
+  if (parola1 === parola2){
+    var output = "la parola è palindroma";
+  } else {
+    output = "la parola non è palindroma";
+  }
+  return output;
 }
 
-console.log("La parola inserita dall'utente è " + parolaUser + " , la medesima parola letta al contrario è " + reverseString(parolaUser) + " quindi: " + output);
+// creo variabile per identificare una parola palindroma
+var parolaPalindroma = palindromo(parolaRevertata, parolaUser);
+
+// verifico in console se parola è palindroma o meno
+console.log(parolaPalindroma);
+
+// output in console se parola è palindroma o meno
+console.log("La parola inserita dall'utente è " + parolaUser + " , la medesima parola letta al contrario è " + parolaRevertata + " quindi: " + parolaPalindroma);
 
 // output sulla pagina
-document.getElementById('parola-palindroma').innerHTML = "La parola inserita dall'utente è " + parolaUser + " , la medesima parola letta al contrario è " + reverseString(parolaUser) + " quindi: " + output;
+document.getElementById('parola-palindroma').innerHTML = "La parola inserita dall'utente è " + parolaUser + " , la medesima parola letta al contrario è " + parolaRevertata + " quindi: " + parolaPalindroma;
